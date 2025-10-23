@@ -5,32 +5,32 @@ export default function Section5() {
     {
       name: "AI女友",
       description: "她会倾听，她会关心，她会记住--你的人工智能女友永远在你身边",
-      img: "/section4/p1.png",
+      img: "/section5/p1.png",
     },
     {
       name: "AI男友",
       description: "专属你的AI健身教",
-      img: "/section4/p1.png",
+      img: "/section5/p1.png",
     },
     {
       name: "AI陪练",
       description: "无论何时何地，你的AI心理",
-      img: "/section4/p1.png",
+      img: "/section5/p1.png",
     },
     {
       name: "AI健康顾问",
       description: "供专业的建议和支持，帮助你走出困境",
-      img: "/section4/p1.png",
+      img: "/section5/p1.png",
     },
     {
       name: "AI职业教练",
       description: "无论何时何地，你的AI心理咨询师都会倾听你的心",
-      img: "/section4/p1.png",
+      img: "/section5/p1.png",
     },
     {
       name: "AI健康行业专家",
       description: "无论何时何地，你的AI心理咨询师都会倾听你的心",
-      img: "/section4/p1.png",
+      img: "/section5/p1.png",
     },
   ];
 

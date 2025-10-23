@@ -19,19 +19,7 @@ const photos = [
 
 export default function TeamGallery() {
   return (
-    <div>
-      <div
-        style={{
-          marginTop: "100px",
-          marginBottom: "40px",
-          display: "flex",
-          flexDirection: "row",
-          justifyContent: "center",
-        }}
-      >
-        <h1>在这里还有有趣的陌生人</h1>
-      </div>
-
+    <>
       <div className={styles.container}>
         {photos.map((src, index) => (
           <motion.div
@@ -69,6 +57,6 @@ export default function TeamGallery() {
           </motion.div>
         ))}
       </div>
-    </div>
+    </>
   );
 }

@@ -5,32 +5,33 @@ export default function AutoScrollPhone() {
     <div
       style={{
         position: "relative",
-        width: "300px",
-        height: "600px",
-        background: 'url("/phone.png") no-repeat center/cover',
+        backgroundColor: "#9c3535ff",
+        width: 422,
+        height: 894,
+        background: 'url("/section4/phone.png") no-repeat center/contain',
         overflow: "hidden",
-        borderRadius: "40px",
-        boxShadow: "0 10px 30px rgba(0,0,0,0.3)",
+        // borderRadius: "40px",
+        // boxShadow: "0 10px 30px rgba(0,0,0,0.3)",
       }}
     >
       <div
         className="scroll-screen"
         style={{
           position: "absolute",
-          top: "50px",
-          left: "30px",
-          width: "240px",
-          height: "500px",
+          top: 100,
+          left: 10,
+          width: 402,
+          height: 783,
           overflow: "hidden",
-          borderRadius: "20px",
-          maskImage:
-            "linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%)",
+          borderRadius: "0px 0px 60px 60px",
+          // maskImage:
+          //   "linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%)",
         }}
       >
         <div className="scroll-inner" style={{ position: "relative" }}>
           {/* 两张相同的内容图用于实现无缝循环 */}
           <img
-            src="/content.jpg"
+            src="/section4/content.jpeg"
             alt="content"
             style={{
               width: "100%",
@@ -38,7 +39,7 @@ export default function AutoScrollPhone() {
             }}
           />
           <img
-            src="/content.jpg"
+            src="/section4/content.jpeg"
             alt="content duplicate"
             style={{
               width: "100%",
@@ -60,7 +61,7 @@ export default function AutoScrollPhone() {
             transform: translateY(0);
           }
           100% {
-            transform: translateY(-50%);
+            transform: translateY(-2612px);
           }
         }
       `}</style>
