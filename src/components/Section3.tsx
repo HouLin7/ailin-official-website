@@ -4,12 +4,12 @@ import { motion } from "framer-motion";
 import styles from "./Section3.module.css";
 
 const photos = [
-  ["/people/p1.png", "/people/p2.png"],
-  ["/people/p3.png", "/people/p4.png"],
-  ["/people/p5.png", "/people/p6.png"],
-  ["/people/p7.png", "/people/p8.png"],
-  ["/people/p9.png", "/people/p10.png"],
-  ["/people/p9.png", "/people/p10.png"],
+  ["/people/01.jpg", "/people/02.jpg"],
+  ["/people/03.jpg", "/people/04.jpg"],
+  ["/people/05.jpg", "/people/06.jpg"],
+  ["/people/07.jpg", "/people/08.jpg"],
+  ["/people/09.jpg", "/people/10.jpg"],
+  ["/people/11.jpg", "/people/12.jpg"],
 ];
 
 const ColumnItem: React.FC<{ src1: string; src2: string; index: number }> = ({
@@ -100,51 +100,57 @@ export default function Section3() {
   };
 
   return (
-    <div style={styles}>
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-        }}
-      >
-        <h1 style={{ marginTop: 50 }}> 在这里还有有趣的陌生人。</h1>
-        <div>
-          {photos.map((pair, index) => (
-            <div
-              key={index}
-              style={{ display: "inline-block", marginRight: 10 }}
-            >
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 2 }}      
+      whileInView="visible"
+    >
+      <div style={styles}>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+          }}
+        >
+          <h1 style={{ marginTop: 50 }}> 在这里还有有趣的陌生人。</h1>
+          <div>
+            {photos.map((pair, index) => (
               <div
-                style={{
-                  position: "relative",
-                  width: 250,
-                  paddingLeft: 5,
-                  paddingRight: 5,
-                  height: 560,
-                  // backgroundColor: "#f5f5f5",
-                  overflow: "hidden",
-                }}
+                key={index}
+                style={{ display: "inline-block", marginRight: 10 }}
               >
                 <div
                   style={{
-                    position: "absolute",
-                    transform:
-                      index % 2 == 0 ? "translateY(80px)" : "translateY(0px)",
+                    position: "relative",
+                    width: 250,
+                    paddingLeft: 5,
+                    paddingRight: 5,
+                    height: 560,
+                    overflow: "hidden",
                   }}
                 >
-                  <ColumnItem
-                    src1={pair[0]}
-                    src2={pair[1]}
-                    index={index}
-                  ></ColumnItem>
+                  <div
+                    style={{
+                      position: "absolute",
+                      transform:
+                        index % 2 == 0 ? "translateY(80px)" : "translateY(0px)",
+                    }}
+                  >
+                    <ColumnItem
+                      src1={pair[0]}
+                      src2={pair[1]}
+                      index={index}
+                    ></ColumnItem>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
-          {/* <TeamGallery></TeamGallery> */}
+            ))}
+            {/* <TeamGallery></TeamGallery> */}
+          </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
