@@ -102,7 +102,7 @@ export default function Section5() {
           margin: "40px",
         }}
       >
-        <h1>与AI分身一起社交</h1>
+        <h1>与AI分身一起社交。</h1>
         <div style={{ marginTop: 20 ,textAlign:'center'}}>
           在这里，不止有你的AI分身，
           <br />

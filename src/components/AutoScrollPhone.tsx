@@ -4,8 +4,7 @@ export default function AutoScrollPhone() {
   return (
     <div
       style={{
-        position: "relative",
-        backgroundColor: "#9c3535ff",
+        position: "relative",        
         width: 422,
         height: 894,
         background: 'url("/section4/phone.png") no-repeat center/contain',

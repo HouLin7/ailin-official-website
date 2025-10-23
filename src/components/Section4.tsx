@@ -4,35 +4,35 @@ import AutoScrollPhone from "./AutoScrollPhone";
 
 export default function Section4() {
   const styles: React.CSSProperties = {
-    display: "flex",
-    flexDirection: "row",
-    justifyContent: "center",
-    alignItems: "center",
+    position: "relative",
     marginTop: "50px",
+    height: 900,
     // backgroundColor: "#adc6ccff",
-    // backgroundSize: "cover",
-    // height: "200px",
     width: "100%",
-    // padding: "20px",
-    // maxWidth:'300px',
-    backgroundPosition: "center",
   };
 
   return (
     <div style={styles}>
-      <div style={{ display: "flex", flexDirection: "column" }}>
+      <div style={{ position: "absolute", left: 400, top: 350 }}>
         <h1>每一个人都</h1>
-        <h1 style={{ marginRight: 50 }}> 能成为主角</h1>
+        <h1 style={{ marginLeft: 50 }}> 能成为主角</h1>
       </div>
-
-      <AutoScrollPhone></AutoScrollPhone>
 
       <div
         style={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "start",
-          marginLeft: 50,
+          position: "absolute",
+          left: "50%",
+          transform: "translateX(-50%)",
+        }}
+      >
+        <AutoScrollPhone></AutoScrollPhone>
+      </div>
+
+      <div
+        style={{
+          position: "absolute",
+          top: 350,
+          left: 1100,
         }}
       >
         <div>「让社交，从这里开始」</div>
