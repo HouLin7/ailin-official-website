@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import styles from "./Section3.module.css";
+import { fadeIn, fadeInUp } from "@/app/utils/animations";
 
 const photos = [
   ["/people/01.jpg", "/people/02.jpg"],
@@ -100,21 +101,17 @@ export default function Section3() {
   };
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 2 }}      
-      whileInView="visible"
-    >
-      <div style={styles}>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-          }}
-        >
-          <h1 style={{ marginTop: 50 }}> 在这里还有有趣的陌生人。</h1>
+    <div style={styles}>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+        }}
+      >
+        <h1 style={{ marginTop: 50 }}> 在这里还有有趣的陌生人。</h1>
+
+        <motion.div variants={fadeInUp} initial="hidden" whileInView="visible">
           <div>
             {photos.map((pair, index) => (
               <div
@@ -149,8 +146,8 @@ export default function Section3() {
             ))}
             {/* <TeamGallery></TeamGallery> */}
           </div>
-        </div>
+        </motion.div>
       </div>
-    </motion.div>
+    </div>
   );
 }

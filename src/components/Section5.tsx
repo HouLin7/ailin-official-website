@@ -1,5 +1,8 @@
 "use client";
 
+import { fadeIn, fadeInUp } from "@/app/utils/animations";
+import { motion } from "framer-motion";
+
 export default function Section5() {
   const peoples = [
     {
@@ -60,7 +63,7 @@ export default function Section5() {
         key={people.name}
         style={{
           display: "flex",
-          flexDirection: "column",          
+          flexDirection: "column",
           alignItems: "center",
           borderRadius: 24,
           paddingLeft: "15px",
@@ -103,7 +106,7 @@ export default function Section5() {
         }}
       >
         <h1>与AI分身一起社交。</h1>
-        <div style={{ marginTop: 20 ,textAlign:'center'}}>
+        <div style={{ marginTop: 20, textAlign: "center" }}>
           在这里，不止有你的AI分身，
           <br />
           还有来自各地、不同风格的朋友，一起开心畅聊，
@@ -112,20 +115,21 @@ export default function Section5() {
         </div>
       </div>
 
-      <div style={{ backgroundColor: "white" }}>
-        <div
-          // className={styles.container}
-          style={{
-            marginLeft: 100,
-            marginRight: 100,
-            display: "flex",
-            gap: "10px",
-            justifyContent: "center",
-          }}
-        >
-          {peoples.map((people, index) => cardTile(index, people))}
+      <motion.div variants={fadeInUp} initial="hidden" whileInView="visible">
+        <div style={{ backgroundColor: "white" }}>
+          <div
+            style={{
+              marginLeft: 100,
+              marginRight: 100,
+              display: "flex",
+              gap: "10px",
+              justifyContent: "center",
+            }}
+          >
+            {peoples.map((people, index) => cardTile(index, people))}
+          </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }

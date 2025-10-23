@@ -8,5 +8,5 @@ export const fadeInUp: Variants = {
 export const fadeIn: Variants = {
 
     hidden: { opacity: 0 },
-    visible: { opacity: 1, transition: { duration: 1, ease: 'easeIn' } },
+    visible: { opacity: 1, transition: { duration: 0.8 } },
 };
