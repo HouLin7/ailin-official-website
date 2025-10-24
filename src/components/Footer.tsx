@@ -21,13 +21,13 @@ export default function Footer() {
           alignItems: "center",
         }}
       >
-        <a href="/privacy" style={{ margin: "0 10px", color: "white" }}>
+        {/* <a href="/privacy" style={{ margin: "0 10px", color: "white" }}>
           隐私政策
         </a>
 
         <a href="/terms" style={{ margin: "0 10px", color: "white" }}>
           服务条款
-        </a>
+        </a> */}
       </div>
     </footer>
   );

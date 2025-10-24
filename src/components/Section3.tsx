@@ -113,7 +113,7 @@ export default function Section3() {
 
         <motion.div variants={fadeInUp} initial="hidden" whileInView="visible">
           <div>
-            {photos.map((pair, index) => (
+            {photos.reverse().map((pair, index) => (
               <div
                 key={index}
                 style={{ display: "inline-block", marginRight: 10 }}

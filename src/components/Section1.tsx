@@ -9,10 +9,10 @@ export default function Section1() {
     flexDirection: "column",
     // justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#adc6ccff",
-    backgroundImage: "url('/section1_bg.png')",
+    // backgroundColor: "#adc6ccff",
+    backgroundImage: "url('/section1_bg.jpg')",
     backgroundSize: "fill",
-    height: 600,
+    height: 400,
     width: "100%",
   };
 
@@ -79,13 +79,13 @@ export default function Section1() {
         <h1 style={{ color: "white" }}>新社交，亲情友情永不掉线</h1>
         <h2 style={{ color: "white" }}>---「我的AI分身随时在线。」</h2>
         <div
-          style={{ fontSize: 16, color: "white", width: 500, marginTop: 20 }}
+          style={{ fontSize: 16, color: "white", width: 500, marginTop: 40 }}
         >
           这是我的专属AI 分身。 <br />
           TA记得我的语气，模仿我的笑声，记得我的事迹。 <br />
           更有爱的AI分身，陪伴我爱的人们。
         </div>
-        <div style={{ marginTop: 100 }}>{download()}</div>
+        {/* <div style={{ marginTop: 100 }}>{download()}</div> */}
       </div>
     </motion.div>
   );
