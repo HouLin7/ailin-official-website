@@ -3,6 +3,8 @@
 import { motion } from "framer-motion";
 import styles from "./Section3.module.css";
 import { fadeIn, fadeInUp } from "@/app/utils/animations";
+import { use, useMemo } from "react";
+import { isMobile } from "react-device-detect";
 
 const photos = [
   ["/people/01.jpg", "/people/02.jpg"],
@@ -94,11 +96,17 @@ export default function Section3() {
     flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
-    // backgroundColor: "#adc6ccff",
-    // height: "400px",
     width: "100%",
     backgroundPosition: "center",
   };
+
+  const photoPairs = useMemo(() => {
+    if (isMobile) {
+      return photos.slice(0, 1);
+    } else {
+      return photos;
+    }
+  }, []);
 
   return (
     <div style={styles}>
@@ -113,7 +121,7 @@ export default function Section3() {
 
         <motion.div variants={fadeInUp} initial="hidden" whileInView="visible">
           <div>
-            {photos.reverse().map((pair, index) => (
+            {photoPairs.reverse().map((pair, index) => (
               <div
                 key={index}
                 style={{ display: "inline-block", marginRight: 10 }}

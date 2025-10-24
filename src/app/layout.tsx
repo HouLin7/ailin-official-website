@@ -11,8 +11,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="zh-CN">
       <body style={{backgroundColor:'white'}}>
         {/* <Navbar /> */}                
-        <main>{children}</main>
-        <Footer />
+        <main>{children}</main>        
       </body>
     </html>
   );

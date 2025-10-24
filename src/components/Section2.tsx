@@ -1,7 +1,8 @@
+"use client";
 export default function Section2() {
   const styles: React.CSSProperties = {
-    display: "flex",    
-    marginTop: "100px",
+    display: "flex",
+    marginTop: "50px",
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
@@ -26,23 +27,13 @@ export default function Section2() {
         上传一张照片，就能生成我的AI分身。
         TA会学习我的语气、表情与习惯,在我离线时，继续与朋友或陌生人互动。这是属于我们的全新社交方式。
       </div>
-      {/* <img
-        src={"/gif/section1.gif"}
-        style={{
-          width: "600px",
-          // height: "300px",
-          objectFit: "cover", // 缩放模式
-          objectPosition: "center", // 裁剪基准
-          borderRadius: "16px",
-        }}
-      ></img> */}
-
+     
       <video
         muted
         autoPlay
         loop
         style={{
-          width: "600",
+          width: "60%",
           height: "auto",
           objectFit: "fill",
           borderRadius: "16px",

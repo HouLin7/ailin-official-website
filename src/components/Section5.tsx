@@ -2,40 +2,52 @@
 
 import { fadeIn, fadeInUp } from "@/app/utils/animations";
 import { motion } from "framer-motion";
+import { useMemo } from "react";
+import { isMobile } from "react-device-detect";
 
 export default function Section5() {
-  const peoples = [
-    {
-      name: "AI女友",
-      description: "她会倾听，她会关心，她会记住--你的人工智能女友永远在你身边",
-      img: "/section5/p1.png",
-    },
-    {
-      name: "AI男友",
-      description: "",
-      img: "/section5/p1.png",
-    },
-    {
-      name: "AI陪练",
-      description: "",
-      img: "/section5/p1.png",
-    },
-    {
-      name: "AI健康顾问",
-      description: "",
-      img: "/section5/p1.png",
-    },
-    {
-      name: "AI职业教练",
-      description: "",
-      img: "/section5/p1.png",
-    },
-    {
-      name: "AI健康行业专家",
-      description: "",
-      img: "/section5/p1.png",
-    },
-  ];
+   const peoples = [
+     {
+       name: "AI女友",
+       description:
+         "她会倾听，她会关心，她会记住--你的人工智能女友永远在你身边",
+       img: "/section5/p1.png",
+     },
+     {
+       name: "AI男友",
+       description: "",
+       img: "/section5/p1.png",
+     },
+     {
+       name: "AI陪练",
+       description: "",
+       img: "/section5/p1.png",
+     },
+     {
+       name: "AI健康顾问",
+       description: "",
+       img: "/section5/p1.png",
+     },
+     {
+       name: "AI职业教练",
+       description: "",
+       img: "/section5/p1.png",
+     },
+     {
+       name: "AI健康行业专家",
+       description: "",
+       img: "/section5/p1.png",
+     },
+   ];
+
+  const peopleList = useMemo(() => {
+    if (isMobile) {
+      return peoples.slice(0, 1);
+    }
+    return peoples;
+  }, []);
+
+ 
 
   const labelStyle: React.CSSProperties = {
     fontSize: 20,
@@ -126,7 +138,7 @@ export default function Section5() {
               justifyContent: "center",
             }}
           >
-            {peoples.map((people, index) => cardTile(index, people))}
+            {peopleList.map((people, index) => cardTile(index, people))}
           </div>
         </div>
       </motion.div>
