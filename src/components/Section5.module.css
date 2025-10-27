@@ -11,7 +11,7 @@
     height: 220px;
     border-radius: 16px;
     overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* transition: transform 0.3s ease, box-shadow 0.3s ease; */
     background-color: #fff;
 }
 

@@ -6,14 +6,6 @@ import { fadeIn, fadeInUp } from "@/app/utils/animations";
 import { use, useMemo } from "react";
 import { isMobile } from "react-device-detect";
 
-const photos = [
-  ["/people/01.jpg", "/people/02.jpg"],
-  ["/people/03.jpg", "/people/04.jpg"],
-  ["/people/05.jpg", "/people/06.jpg"],
-  ["/people/07.jpg", "/people/08.jpg"],
-  ["/people/09.jpg", "/people/10.jpg"],
-  ["/people/11.jpg", "/people/12.jpg"],
-];
 
 const ColumnItem: React.FC<{ src1: string; src2: string; index: number }> = ({
   src1,
@@ -72,7 +64,7 @@ const ColumnItem: React.FC<{ src1: string; src2: string; index: number }> = ({
           duration: 4,
           repeat: Infinity,
           repeatType: "mirror",
-          delay: index * 0.2,
+          delay: index * 0.25,
         }}
         whileHover={{
           y: -8,
@@ -100,6 +92,14 @@ export default function Section3() {
     backgroundPosition: "center",
   };
 
+  const photos = [
+    ["/people/01.jpg", "/people/02.jpg"],
+    ["/people/03.jpg", "/people/04.jpg"],
+    ["/people/05.jpg", "/people/06.jpg"],
+    ["/people/07.jpg", "/people/08.jpg"],
+    ["/people/09.jpg", "/people/10.jpg"],
+    ["/people/11.jpg", "/people/12.jpg"],
+  ];
   const photoPairs = useMemo(() => {
     if (isMobile) {
       return photos.slice(0, 1);
